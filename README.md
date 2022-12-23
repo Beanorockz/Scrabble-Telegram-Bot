@@ -29,7 +29,9 @@
 
 # References
 Python-Telegram-Bot: https://github.com/python-telegram-bot/python-telegram-bot\
+
 Resource for /retire: https://github.com/ShatteredDisk/ (Not gonna ruin the surprise by including the specific library)
+
 Resource for /random: https://thecatapi.com/
 
 Originally done on Replit.com
