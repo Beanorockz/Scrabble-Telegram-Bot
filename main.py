@@ -39,15 +39,18 @@ dispatcher = updater.dispatcher
 
 def start(update, context):
     update.message.reply_text(
-        "Welcome to Hall X Word Games Bot created by a useless guy")
+        "Welcome to Hall X Word Games Bot created by a useless guy \n Do /help to get actual useful instructions.")
 
 
 def help(update, context):
-    update.message.reply_text("To use our bot, choose from one of the following commands:\n\n /check : Input your words, separated by a space to check if they're valid words\n\n /unscramble : Input your characters, separated by a space to see if you can form a valid word\n\n /dict : Input a character, with a space and an integer representing the length of word to find all valid words starting with the letter, with represented integer length \n\n /random : Get a random cat pic")
+    update.message.reply_text("To use our bot, choose from one of the following commands:\n\n/check : Input your words, separated by a space to check if they're valid words\n\n/unscramble : Input your characters, separated by a space to see if you can form a valid word\n\n/dict : Input a character, with a space and an integer representing the length of word to find all valid words starting with the letter, with represented integer length \n\n/random : Trust me bro, you wanna do this \n\n /retire : Trust me bro, you also wanna do this.")
 
 
 def check(update, context):
     checkList = update.message.text.upper().split()
+    if len(checkList) == 1:
+      update.message.reply_text("Usage: /check *insert words separated by spaces*. \nE.g.: /check qua qaid ")
+      return
     checkList = checkList[1:]
     if len(checkList) == 0:
       update.message.reply_text("Please input words for me to check.")
@@ -76,6 +79,9 @@ def check(update, context):
 def unscramble(update, context):
     possibleBingo = list()
     letterList = update.message.text.upper().split()
+    if len(letterList) == 1:
+      update.message.reply_text("Usage: /unscramble *insert 7 letters* If you have blanks, use ? instead.\nE.g.: /unscramble rteails")
+      return
     letterList = letterList[1:]
     if len(letterList) == 1:
         letterList = list(letterList[0])
@@ -87,6 +93,9 @@ def unscramble(update, context):
     for i in letterList:
         if i == "?":
             letterList.remove("?")
+    if len(letterList) < 5:
+      update.message.reply_text("You can't have more than 2 blanks.")
+      return
     for i in letterList:
         tempList = letterList.copy()
         tempList.remove(i)
@@ -124,6 +133,9 @@ def unscramble(update, context):
 def dict(update, context):
     dictList = list()
     letter = update.message.text.upper().split()
+    if len(letter) == 1:
+      update.message.reply_text("Usage: /dict *letter* *number* \nE.g.: /dict q 6")
+      return
     letter = letter[1:]
     possibleWords = letterDict.get(letter[0])
     for i in possibleWords:
@@ -157,7 +169,7 @@ def random(update, context):
 
 
 def retire(update, context):
-  update.message.reply_video("https://github.com/Beanorockz/Scrabble-Telegram-Bot/blob/main/imptvid.mp4")
+  update.message.reply_video("https://shattereddisk.github.io/rickroll/rickroll.mp4")
       
 
 
