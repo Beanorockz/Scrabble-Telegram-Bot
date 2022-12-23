@@ -1,5 +1,5 @@
 # Scrabble-Telegram-Bot
- Telegram Bot for basic Scrabble needs, using Python-Telegram-Bot library.
+ Telegram Bot for basic Scrabble needs, created using Python-Telegram-Bot library.
  
  Dictionary Used: CSW21, can be changed by uploading a new dictionary (txt format, separated by \n) and changing the path in main.py
  
