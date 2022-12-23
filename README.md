@@ -3,8 +3,11 @@
  
  Dictionary Used: CSW21, can be changed by uploading a new dictionary (txt format, separated by \n) and changing the path in main.py
  
+ 
+ 
 # Functions
- Unscramble
+ **Unscramble**
+ 
  
  Unscrambles the letters provided to find all possible Bingos
  
@@ -13,7 +16,8 @@
  E.g.: /unscramble etrials returns a list of possible Bingos, e.g. retails
  
  
- Dict
+ 
+ **Dict**
  
  Lists all possible words of length provided and starting with the letter provided
  
@@ -22,7 +26,8 @@
  E.g.: /dict q 4 returns a list of all words of length 4, that starts with the letter q
  
  
- Check
+ 
+ **Check**
  
  Checks all words provided to see if they're valid plays.
  
@@ -30,7 +35,9 @@
  
  E.g.: /check qua qaid quit ashdja
  
- Random and Retire
+ 
+ 
+ **Random and Retire**
  
  Try it out yourselves :)
 
