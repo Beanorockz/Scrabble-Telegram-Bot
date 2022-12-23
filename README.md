@@ -25,7 +25,7 @@
  
  
  **Check**
- 
+
  Checks all words provided to see if they're valid plays.
  
  Usage: /check *insert words separated by spaces (up to 50)*
